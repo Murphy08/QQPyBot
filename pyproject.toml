@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "QQPyBot"
+version = "0.1.0"
+description = "FastAPI Webhook SDK for the QQ Bot Open Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1"]
+keywords = ["qqbot", "qq", "webhook", "fastapi"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: FastAPI",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/Murphy08/QQPyBot"
+Issues = "https://github.com/Murphy08/QQPyBot/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qqpybot = ["catalog.json", "py.typed"]
