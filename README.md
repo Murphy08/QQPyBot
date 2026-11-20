@@ -57,6 +57,6 @@ await bot.api.request("GET", "/users/@me")
 
 ## 开发与发布
 
-在项目的虚拟环境运行 `python -m pip install -e .`，然后执行 `python -m unittest discover -s tests -v`。执行 `python scripts/sync_catalog.py` 可将官方接口目录同步到包内。
+在项目的虚拟环境运行 `python -m pip install -e .`，然后执行 `python -m unittest discover -s tests -v`。更新接口或事件时，维护 `src/qqpybot/catalog.json` 并运行 `python scripts/build_docs.py` 更新对应文档。
 
 发布前在 PyPI 建立 Trusted Publisher，项目名填 `QQPyBot`，GitHub Owner 填 `Murphy08`，仓库填 `QQPyBot`，工作流填 `publish.yml`，环境填 `pypi`。更新 `pyproject.toml` 中的版本，推送对应 `vX.Y.Z` 标签即可构建并发布。
